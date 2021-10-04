@@ -9,7 +9,7 @@
     .container {
       nav {
         z-index: 10;
-        background-color: white;
+        background-color: #414f5c;
         width: 75%;
         height: 100vh;
         position: absolute;
@@ -29,7 +29,7 @@
             padding: 20px 30px;
             border-bottom: 1.5px solid #e0e0e0;
             a {
-              color: #000;
+              color: #fff;
 
               @include min-touch-target();
 
@@ -43,6 +43,11 @@
       .open {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
+      }
+
+      .menu {
+        color: #fff;
+        background-color: transparent;
       }
     }
   }
@@ -76,7 +81,7 @@
 // medium (md) device
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 680px;
   }
   .list-item {
     grid-template-columns: repeat(2, 1fr);
@@ -97,7 +102,7 @@
 // large (lg) device
 @media screen and (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 900px;
   }
   .list-item {
     grid-template-columns: repeat(3, 1fr);
@@ -118,7 +123,7 @@
 // xtra-large (xl) device
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1040px;
   }
   .hero {
     img {

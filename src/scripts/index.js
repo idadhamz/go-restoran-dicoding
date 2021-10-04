@@ -4,11 +4,21 @@ import '../styles/responsive.scss';
 
 console.log('Hello Coders! :)');
 
+const header = document.querySelector('.header');
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#drawer');
 const list_item = document.querySelector('.list-item');
+
+window.addEventListener("scroll", function () {
+    console.log(window.scrollY);
+    if (window.scrollY > 250) {
+        header.classList.add('bg-header');
+    } else {
+        header.classList.remove('bg-header');
+    }
+})
 
 menu.addEventListener('click', function (event) {
     drawer.classList.toggle('open');
