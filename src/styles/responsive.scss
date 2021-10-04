@@ -1,0 +1,142 @@
+@import "_mixins.scss";
+
+// small (sm) device
+@media screen and (max-width: 499px) {
+  .container {
+    max-width: 300px;
+  }
+  header {
+    .container {
+      nav {
+        z-index: 10;
+        background-color: white;
+        width: 75%;
+        height: 100vh;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+        transition: transform 0.3s ease;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+
+          li {
+            width: 100%;
+            padding: 20px 30px;
+            border-bottom: 1.5px solid #e0e0e0;
+            a {
+              color: #000;
+
+              @include min-touch-target();
+
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+
+      .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+  }
+  .hero {
+    h1 {
+      font-size: 24px;
+    }
+  }
+  .list-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+// small to medium device
+@media screen and (min-width: 500px) {
+  .container {
+    max-width: 540px;
+  }
+  header {
+    .container {
+      .menu {
+        display: none;
+      }
+    }
+  }
+  .list-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+// medium (md) device
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .list-item {
+    grid-template-columns: repeat(2, 1fr);
+
+    .item {
+      .img-item {
+        padding: 0;
+
+        .img-desc-item {
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+// large (lg) device
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .list-item {
+    grid-template-columns: repeat(3, 1fr);
+
+    .item {
+      .img-item {
+        padding: 0;
+
+        .img-desc-item {
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+// xtra-large (xl) device
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .hero {
+    img {
+      min-width: 1000px;
+    }
+  }
+  .list-item {
+    grid-template-columns: repeat(3, 1fr);
+
+    .item {
+      .img-item {
+        padding: 0;
+
+        .img-desc-item {
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}

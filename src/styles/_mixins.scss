@@ -1,0 +1,10 @@
+@mixin min-touch-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@mixin centering-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
